@@ -26,6 +26,8 @@
             <artifactId>sample-ejbs</artifactId>
             <groupId>${project.groupId}</groupId>
             <version>${project.version}</version>
+            <!-- make EJB dependency provided so that it does not end up 2 times in the .ear -->
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 </project>
