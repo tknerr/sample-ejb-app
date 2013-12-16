@@ -7,6 +7,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>sample-ejbs</module>
+        <module>acme-ejbs</module>
         <module>sample-webapp</module>
         <module>sample-ear</module>
     </modules>

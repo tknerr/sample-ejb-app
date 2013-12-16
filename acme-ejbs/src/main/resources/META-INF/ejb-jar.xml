@@ -5,6 +5,6 @@
     <!-- 
         empty ejb-jar.xml - we use annotations for defining the ejbs
      -->
-    <display-name>org.sample EJBs</display-name>
+    <display-name>com.acme extensions to the org.sample EJBs</display-name>
     
 </ejb-jar>

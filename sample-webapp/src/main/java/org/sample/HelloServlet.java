@@ -12,8 +12,8 @@ import javax.servlet.http.HttpServletResponse;
 public class HelloServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
-    @EJB(beanName = "AlternativeBar")
-    private Bar bar;
+    @EJB
+    private Foo foo;
 
     public HelloServlet() {}
 
@@ -24,7 +24,7 @@ public class HelloServlet extends HttpServlet {
         writer.println("<head><title>Hello World Servlet</title></head>");
         writer.println("<body>");
         writer.println("    <h3>Hello World from a Servlet!</h3>");
-        writer.println("    <p><b>Bar Bean says</b>: " + bar.sayHello() + "</p>");
+        writer.println("    <p><b>Let's listen to FOO:</b> " + foo.tellMeSomething() + "</p>");
         writer.println("<body>");
         writer.println("</html>");
         writer.close();
