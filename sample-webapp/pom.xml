@@ -29,5 +29,13 @@
             <!-- make EJB dependency provided so that it does not end up 2 times in the .ear -->
             <scope>provided</scope>
         </dependency>
+        
+        <dependency>
+            <artifactId>acme-ejbs</artifactId>
+            <groupId>com.acme</groupId>
+            <version>0.0.1-SNAPSHOT</version>
+            <!-- make EJB dependency provided so that it does not end up 2 times in the .ear -->
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 </project>
