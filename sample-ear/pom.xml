@@ -17,6 +17,8 @@
                 <configuration>
                     <version>6</version>
                     <defaultLibBundleDir>lib</defaultLibBundleDir>
+                    <applicationXml>${project.basedir}/src/main/application/application.xml</applicationXml>
+                    <generateApplicationXml>false</generateApplicationXml>
                     <modules>
                         <ejbModule>
                             <groupId>${project.groupId}</groupId>

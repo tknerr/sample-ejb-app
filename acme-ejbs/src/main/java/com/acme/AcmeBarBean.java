@@ -4,7 +4,7 @@ import javax.ejb.Stateless;
 
 import org.sample.Bar;
 
-@Stateless(name = "AcmeBarBean")
+@Stateless
 public class AcmeBarBean implements Bar {
 
     @Override
