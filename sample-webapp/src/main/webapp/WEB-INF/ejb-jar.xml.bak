@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ejb-jar xmlns="http://java.sun.com/xml/ns/javaee" version="3.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/ejb-jar_3_0.xsd">
+    <enterprise-beans>
+        <!-- override FooBean's dependency on BarBean with AlternativeBarBean -->
+        <session>
+            <ejb-name>FooBean</ejb-name>
+            <ejb-local-ref>
+                <!-- this is the GlassFish generated JNDI name if no @EJB(name=...) is specified  -->
+                <ejb-ref-name>org.sample.FooBean/bar</ejb-ref-name>
+                <!-- use this alternative implementation instead -->
+                <ejb-link>AlternativeBarBean</ejb-link>
+            </ejb-local-ref>
+        </session>
+    </enterprise-beans>
+</ejb-jar>
