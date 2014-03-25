@@ -18,9 +18,16 @@
     </module>
     <library-directory>lib</library-directory>
     
+    <!-- use either AcmeBarBean or BarBean in the 2nd level FooBean Dependency -->
     <ejb-local-ref>
         <ejb-ref-name>org.sample.FooBean/bar</ejb-ref-name>
         <ejb-link>AcmeBarBean</ejb-link>
+    </ejb-local-ref>
+    
+    <!-- use either AcmeFooBean (extends FooBean) or FooBean directly -->
+    <ejb-local-ref>
+        <ejb-ref-name>org.sample.HelloServlet/foo</ejb-ref-name>
+        <ejb-link>AcmeFooBean</ejb-link>
     </ejb-local-ref>
     
 </application>
