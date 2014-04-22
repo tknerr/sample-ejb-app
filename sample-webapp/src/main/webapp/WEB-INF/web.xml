@@ -17,4 +17,9 @@
         <url-pattern>/hello</url-pattern>
     </servlet-mapping>
 
+
+    <listener>
+        <display-name>someListener</display-name>
+        <listener-class>org.sample.SampleContextListener</listener-class>
+    </listener>
 </web-app>
