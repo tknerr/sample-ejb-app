@@ -26,8 +26,16 @@
     
     <!-- use either AcmeFooBean (extends FooBean) or FooBean directly -->
     <ejb-local-ref>
-        <ejb-ref-name>org.sample.HelloServlet/foo</ejb-ref-name>
+        <ejb-ref-name>some/Foo</ejb-ref-name>
         <ejb-link>AcmeFooBean</ejb-link>
     </ejb-local-ref>
     
+    <!-- overriding is not possible :-( -->
+    <!--
+    <ejb-local-ref>
+        <ejb-ref-name>org.sample.HelloServlet/foo</ejb-ref-name>
+        <ejb-link>FooBean</ejb-link>
+    </ejb-local-ref>
+     -->
+     
 </application>

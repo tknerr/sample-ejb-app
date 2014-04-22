@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 public class HelloServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
-    @EJB
+    @EJB(name = "some/Foo")
     private Foo foo;
 
     public HelloServlet() {}
