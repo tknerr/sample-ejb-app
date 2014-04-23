@@ -1,9 +1,7 @@
 package org.sample.remotelocal;
 
+@javax.ejb.Local
 public interface CoffeeFacade {
-
-    @javax.ejb.Local
-    interface Local extends CoffeeFacade {}
 
     @javax.ejb.Remote
     interface Remote extends CoffeeFacade {}

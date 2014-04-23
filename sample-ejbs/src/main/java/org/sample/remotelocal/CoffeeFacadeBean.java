@@ -4,7 +4,7 @@ import javax.ejb.EJB;
 import javax.ejb.Stateless;
 
 @Stateless
-public class CoffeeFacadeBean implements CoffeeFacade.Local, CoffeeFacade.Remote {
+public class CoffeeFacadeBean implements CoffeeFacade, CoffeeFacade.Remote {
 
     @EJB
     private Coffee localCoffee;
