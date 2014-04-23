@@ -7,9 +7,9 @@ import javax.ejb.Stateless;
 public class CoffeeFacadeBean implements CoffeeFacade.Local, CoffeeFacade.Remote {
 
     @EJB
-    private Coffee localCoffee;
+    private Coffee.Local localCoffee;
     @EJB
-    private Coffee remoteCoffee;
+    private Coffee.Remote remoteCoffee;
 
     @Override
     public String drinkLocalCoffee() {
