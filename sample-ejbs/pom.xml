@@ -19,9 +19,23 @@
 
     <dependencies>
         <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
             <groupId>org.glassfish.main.ejb</groupId>
             <artifactId>javax.ejb</artifactId>
             <scope>provided</scope>
         </dependency>
+
+        <dependency>
+            <groupId>org.glassfish.main.appclient.client</groupId>
+            <artifactId>gf-client</artifactId>
+            <version>3.1.2</version>
+            <scope>system</scope>
+            <systemPath>Y:/tools/glassfish/glassfish3/glassfish/lib/gf-client.jar</systemPath>
+        </dependency>
+
     </dependencies>
 </project>
