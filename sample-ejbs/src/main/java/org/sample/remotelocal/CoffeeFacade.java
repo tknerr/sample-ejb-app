@@ -1,11 +1,12 @@
 package org.sample.remotelocal;
 
-import javax.ejb.Local;
-import javax.ejb.Remote;
-
-@Local
-@Remote
 public interface CoffeeFacade {
+
+    @javax.ejb.Local
+    interface Local extends CoffeeFacade {}
+
+    @javax.ejb.Remote
+    interface Remote extends CoffeeFacade {}
 
     String drinkLocalCoffee();
 

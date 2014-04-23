@@ -3,7 +3,7 @@ package org.sample.remotelocal;
 import javax.ejb.Stateless;
 
 @Stateless
-public class CoffeeFacadeBean implements CoffeeFacade {
+public class CoffeeFacadeBean implements CoffeeFacade.Local, CoffeeFacade.Remote {
 
     @Override
     public String drinkLocalCoffee() {

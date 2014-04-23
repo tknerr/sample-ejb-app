@@ -17,7 +17,7 @@ public class CoffeeMain {
             InitialContext ctx = new InitialContext(env);
             CoffeeFacade facade =
                 (CoffeeFacade)ctx
-                    .lookup("java:global/sample-ear-0.0.1-SNAPSHOT/sample-ejbs-0.0.1-SNAPSHOT/CoffeeFacadeBean!org.sample.remotelocal.CoffeeFacade");
+                    .lookup("java:global/sample-ear-0.0.1-SNAPSHOT/sample-ejbs-0.0.1-SNAPSHOT/CoffeeFacadeBean!org.sample.remotelocal.CoffeeFacade$Remote");
             System.out.println(facade.drinkLocalCoffee());
             System.out.println(facade.drinkRemoteCoffee());
         } catch (Exception e) {
