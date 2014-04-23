@@ -6,8 +6,9 @@ import javax.ejb.Stateless;
 @Stateless
 public class CoffeeFacadeBean implements CoffeeFacade.Local, CoffeeFacade.Remote {
 
-    @EJB(beanInterface = Coffee.Local.class)
+    @EJB
     private Coffee localCoffee;
+
     @EJB(beanInterface = Coffee.Remote.class)
     private Coffee remoteCoffee;
 
