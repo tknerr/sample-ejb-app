@@ -15,10 +15,11 @@ public class CoffeeMain {
         env.put("org.omg.CORBA.ORBInitialPort", "3700");
         try {
             InitialContext ctx = new InitialContext(env);
-            Coffee remoteCoffee =
-                (Coffee)ctx
-                    .lookup("java:global/sample-ear-0.0.1-SNAPSHOT/sample-ejbs-0.0.1-SNAPSHOT/CoffeeBean!org.sample.remotelocal.Coffee$Remote");
-            System.out.println(remoteCoffee.drink());
+            CoffeeFacade facade =
+                (CoffeeFacade)ctx
+                    .lookup("java:global/sample-ear-0.0.1-SNAPSHOT/sample-ejbs-0.0.1-SNAPSHOT/CoffeeFacadeBean!org.sample.remotelocal.CoffeeFacade");
+            System.out.println(facade.drinkLocalCoffee());
+            System.out.println(facade.drinkRemoteCoffee());
         } catch (Exception e) {
             e.printStackTrace();
         }
