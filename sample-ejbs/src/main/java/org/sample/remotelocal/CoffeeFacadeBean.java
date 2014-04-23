@@ -6,10 +6,10 @@ import javax.ejb.Stateless;
 @Stateless
 public class CoffeeFacadeBean implements CoffeeFacade.Local, CoffeeFacade.Remote {
 
-    @EJB
-    private Coffee.Local localCoffee;
-    @EJB
-    private Coffee.Remote remoteCoffee;
+    @EJB(beanInterface = Coffee.Local.class)
+    private Coffee localCoffee;
+    @EJB(beanInterface = Coffee.Remote.class)
+    private Coffee remoteCoffee;
 
     @Override
     public String drinkLocalCoffee() {
